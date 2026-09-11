@@ -164,7 +164,7 @@ async function put(i,f){let d=await odb();return new Promise((a,b)=>{let t=d.tra
 async function get(i){let d=await odb();return new Promise((a,b)=>{let r=d.transaction("v").objectStore("v").get(String(i));r.onsuccess=()=>a(r.result);r.onerror=()=>b(r.error)})}
 function render(){document.getElementById("books").innerHTML=books.map((x,i)=>`<div class="card"><b>${x}</b><div class="actions"><label class="btn">📎 Upload<input type="file" accept=".pdf,image/*" onchange="up(${i},this.files[0])"></label><button class="btn secondary" onclick="view(${i})">👁 Lihat</button><button class="btn danger" onclick="del(${i})">Hapus</button></div><div id="s${i}" class="muted"></div></div>`).join("");books.forEach(async(_,i)=>{let f=await get(i);if(f)document.getElementById("s"+i).textContent="📎 "+f.name})}
 async function up(i,f){if(!f)return;await put(i,f);render();alert("Voucher tersimpan 👍")}
-async function view(i){let f=await get(i);if(!f){alert("Belum ada voucher.");return}window.open(URL.createObjectURL(f),"_blank")}
+async function view(i){let w=window.open("about:blank","_blank");let f=await get(i);if(!f){if(w)w.close();alert("Belum ada voucher.");return}let u=URL.createObjectURL(f);if(w){w.location.href=u}else{let a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener";document.body.appendChild(a);a.click();a.remove()}}
 async function del(i){let d=await odb();d.transaction("v","readwrite").objectStore("v").delete(String(i));setTimeout(render,100)}
 function go(id,b){document.querySelectorAll(".page").forEach(x=>x.classList.remove("on"));document.getElementById(id).classList.add("on");document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("on"));b.classList.add("on");scrollTo(0,0)}
 render();
