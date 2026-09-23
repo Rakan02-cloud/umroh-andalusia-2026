@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="#183153" name="theme-color"/>
+<link rel="manifest" href="./manifest.webmanifest">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Umroh + Andalusia 2026</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f5f7fa;color:#17202a}
+header{background:linear-gradient(145deg,#183153,#294d78);color:#fff;padding:26px 18px 22px;border-radius:0 0 24px 24px}
+h1{margin:0 0 5px;font-size:24px}.sub{font-size:13px;opacity:.82}
+main{max-width:760px;margin:auto;padding:14px 15px 92px}.page{display:none}.page.on{display:block}
+h2{font-size:19px}.card{background:#fff;border-radius:16px;padding:15px;margin:12px 0;box-shadow:0 2px 10px #0001}
+.day{font-weight:800;font-size:17px}.row{padding:11px 0;border-bottom:1px solid #edf0f3}.row:last-child{border:0}
+.time{font-weight:800;color:#183153}.place{font-weight:750;color:#183153;text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:3px}.place:after{content:" ↗";font-size:10px;text-decoration:none;display:inline-block}
+.tag{display:inline-block;padding:4px 8px;border-radius:20px;background:#edf5ef;color:#287a55;font-size:11px;font-weight:700;margin:3px 3px 0 0}
+.muted{color:#697586;font-size:13px}.meal{background:#fffaf0;border-left:4px solid #c89b3c}.transport{background:#f1f6fb;border-left:4px solid #315b88}
+.note{background:#fff7e6;padding:11px;border-radius:12px;color:#765c20;font-size:12px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:9px}
+.btn{border:0;border-radius:10px;padding:9px 11px;background:#183153;color:#fff;font-weight:700;font-size:12px}.btn.secondary{background:#eaf0f6;color:#183153}.btn.danger{background:#fff0f0;color:#a33}
+input[type=file]{display:none}
+.tabs{position:fixed;z-index:5;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #ddd;display:flex;justify-content:space-around;padding:8px 2px 13px}
+.tabs button{border:0;background:none;color:#687385;font-size:9px;font-weight:600}.tabs button b{display:block;font-size:19px}.tabs .on{color:#183153}
+
+.transport.suggestion{background:#f1f6fb;border-left:4px solid #315b88;padding:8px 11px;color:#315b88}
+.transport.suggestion b{font-size:12px}
+
+.history-index{background:#eef4fa;border:1px solid #d7e2ee;border-radius:16px;padding:14px;margin:12px 0}
+.history-index h3{margin:0 0 9px;color:#183153;font-size:16px}
+.history-index a{display:block;padding:9px 10px;margin:5px 0;background:#fff;border-radius:10px;color:#183153;text-decoration:none;font-weight:750;font-size:13px}
+.history-index a:after{content:"  ›";float:right}
+.history-card h3{margin-top:0;color:#183153}
+.history-card h4{margin:14px 0 6px;color:#294d78;font-size:14px}
+.history-card ul{padding-left:20px;margin-top:6px}
+.history-card li{margin:5px 0}
+.history-tip{background:#fffaf0;border-left:4px solid #c89b3c;padding:10px 11px;border-radius:10px;font-size:12px;color:#765c20}
+.back-index{display:inline-block;margin-top:10px;padding:8px 10px;border-radius:10px;background:#eaf0f6;color:#183153;text-decoration:none;font-weight:750;font-size:12px}
+.timeline{border-left:3px solid #294d78;padding-left:14px}
+.timeline .t{margin:0 0 12px}
+.timeline b{color:#183153}
+</style>
+</head>
+<body>
+<header><div class="sub">TRIP DASHBOARD • V3.5</div><h1>Umroh + Andalusia 2026</h1><div class="sub">6–21 November 2026 • 2 pax</div></header>
+<main>
+<section class="page on" id="home"><div class="note">🔵 <u>Nama bergaris bawah + ↗</u> = LIVE, bisa ditekan dan langsung membuka Google Maps. Teks tanpa garis bawah = informasi biasa.</div>
+<h2>🏠 Dashboard</h2>
+<div class="card">
+<div class="row"><b>🇸🇦 6–14 Nov</b><span class="tag">UMROH</span></div>
+<div class="row"><b>🇪🇸 14–21 Nov</b><span>Madrid → Sevilla → Córdoba → Granada → Barcelona</span></div>
+</div>
+<div class="card"><b>Highlights</b>
+<p><a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Real+Alcazar+de+Sevilla">Real Alcázar · Cathedral + Giralda · Mezquita · Alhambra · Sagrada Família · MUHBA · Museu Picasso</a> · <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Mezquita+Cathedral+Cordoba">Mezquita</a> · <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Alhambra+Granada">Alhambra</a> · <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Plaza+de+Espana+Seville">Plaza de España</a></p>
+</div>
+<div class="card"><b>Golden rule 😁</b><p class="muted">Hemat + experience lokal + jalan kaki secukupnya. Dengan 2 koper 20" expandable + 2 backpack, taxi dipilih bila lebih masuk akal.</p></div>
+</section>
+<section class="page" id="itinerary">
+<h2>📅 Itinerary Detail</h2>
+<div class="card"><div class="day">14 Nov — Madrid → Sevilla</div>
+<div class="row"><span class="time">13:25</span> Landing Madrid • Saudia SV227</div>
+<div class="row transport"><b>Airport → Atocha</b><br/><span class="muted">Cercanías / Airport Express / Taxi. ⭐ Pilih yang minim pindah dengan koper.</span></div>
+<div class="row"><span class="time">19:05</span> 🚆 Madrid → Sevilla</div>
+<div class="row"><span class="time">21:44</span> Tiba Sevilla → <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=The+Zentral+Seville">The Zentral</a><br/><span class="muted">⭐ Taxi recommended karena malam + koper.</span></div>
+<div class="row meal"><b>🍽️ 22:00 Dinner ringan</b><br/>⭐ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Al+Wadi+Seville">Al Wadi</a> (halal, Centro) — pilih bila masih ingin makan di luar.<br/>↔️ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=El+Rincon+de+Beirut+Seville">El Rincón de Beirut</a> — alternatif halal.<br/><span class="muted">🥗 Pilih grilled chicken/meat + salad/hummus; air mineral. Jika tiba terlalu lelah, takeaway dekat hotel.</span></div>
+</div>
+<div class="card"><div class="day">15 Nov — Sevilla • Scenic &amp; Local Day</div>
+<div class="row meal"><span class="time">08:00</span> 🌅 <b>Breakfast</b><br/>⭐ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Kaapeh+Seville">Kaapeh / café Centro</a> — breakfast ringan di rute.<br/>↔️ Hotel breakfast sebagai opsi paling praktis.<br/><span class="muted">🥚 Order: telur/omelette + plain yogurt/fruit bila tersedia + espresso/americano/decaf tanpa gula.</span></div>
+<div class="row"><span class="time">09:30</span> <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Plaza+de+Espana+Seville">Plaza de España</a><br/><span class="muted">⭐ Pagi lebih nyaman untuk foto &amp; jalan santai; taxi bila ingin hemat tenaga.</span></div><div class="row transport suggestion"><b>🚶 Plaza de España → Parque de María Luisa</b><br/><span class="muted">Jalan kaki ±5–10 menit • paling praktis.</span></div><div class="row transport suggestion"><b>🚶 María Luisa → Santa Cruz / Plaza del Triunfo</b><br/><span class="muted">Jalan kaki ±15–20 menit • sambil menikmati area selatan Sevilla.</span></div>
+<div class="row"><span class="time">10:45</span> <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Parque+de+Maria+Luisa+Seville">Parque de María Luisa</a></div>
+<div class="row"><span class="time">12:00</span> <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Barrio+Santa+Cruz+Seville">Santa Cruz</a> → <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Plaza+del+Triunfo+Seville">Plaza del Triunfo</a></div><div class="row transport suggestion"><b>🚶 Plaza del Triunfo → Museo del Baile Flamenco</b><br/><span class="muted">Jalan kaki ±8–10 menit • tidak perlu taxi.</span></div>
+<div class="row meal"><b>🍽️ 12:45 Lunch — Santa Cruz</b><br/>⭐ Rekomendasi: <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=El+Rincon+de+Beirut+Seville">El Rincón de Beirut</a><br/>↔️ Alternatif: restoran Lebanese/Moroccan halal di Centro.<br/><span class="muted">🥗 Menu: hummus/fattoush + grilled chicken/fish; hindari minuman manis.</span></div>
+<div class="row"><span class="time">14:15–15:15</span> 💃 <b><a class="place" href="https://museodelbaileflamenco.com/">Museo del Baile Flamenco</a></b><br/><span class="muted">⭐ Museum pengalaman budaya Andalusia; fokus sejarah, gaya, evolusi tari flamenco. Estimasi 45–60 menit.</span></div>
+<div class="row meal"><b>☕ 15:30 Outdoor café</b><br/>⭐ Café terrace Santa Cruz/Centro.<br/><span class="muted">☕ Espresso / americano / decaf tanpa gula.</span></div>
+<div class="row"><span class="time">16:30</span> Rest di hotel</div>
+<div class="row meal"><b>💃 19:00–20:00 Flamenco Show</b><br/><span class="muted">⭐ Puro Flamenco di Museo del Baile Flamenco. Jadwal resmi saat ini mencantumkan show 17:00, 19:00, dan 20:45.</span></div>
+<div class="row meal"><b>🍽️ 20:30 Dinner</b><br/>⭐ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Tanto+Monta+Seville">Tanto Monta</a> — halal.<br/>↔️ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Al+Wadi+Seville">Al Wadi</a> — halal di area Cathedral/Giralda.<br/><span class="muted">🥗 Recommended: grilled ayam/daging + salad/hummus.</span></div>
+</div>
+<div class="card"><div class="day">16 Nov — Sevilla • Monumental Day</div>
+<div class="row meal"><span class="time">08:00</span> 🌅 <b>Breakfast</b><br/><span class="muted">⭐ Café dekat hotel. Telur + yogurt/plain + coffee tanpa gula.</span></div>
+<div class="row"><span class="time">09:15</span> 🏰 <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Real+Alcazar+de+Sevilla">Real Alcázar</a><br/><span class="muted">⭐ Slot utama. Datang 10–15 menit lebih awal.</span></div><div class="row transport suggestion"><b>🚶 Real Alcázar → Plaza del Triunfo</b><br/><span class="muted">Jalan kaki ±2–3 menit • satu cluster monumental.</span></div>
+<div class="row"><span class="time">11:15</span> <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Plaza+del+Triunfo+Seville">Plaza del Triunfo</a> → area <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Seville+Cathedral">Seville Cathedral</a></div><div class="row transport suggestion"><b>🚶 Plaza del Triunfo → Seville Cathedral / Giralda</b><br/><span class="muted">Jalan kaki ±1–2 menit • sangat dekat.</span></div>
+<div class="row"><span class="time">11:30</span> ⛪ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Seville+Cathedral">Seville Cathedral</a> + <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Giralda+Seville">Giralda</a><br/><span class="muted">⭐ Slot utama kedua; dua atraksi besar selesai dalam satu cluster.</span></div><div class="row transport suggestion"><b>🚶 Cathedral / Giralda → Archivo de Indias → Plaza Nueva</b><br/><span class="muted">Jalan kaki • Archivo hanya beberapa menit dari Cathedral; lanjut ke Plaza Nueva ±10 menit.</span></div>
+<div class="row"><span class="time">13:30</span> <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Archivo+de+Indias+Seville">Archivo de Indias</a> → <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Plaza+Nueva+Seville">Plaza Nueva</a></div>
+<div class="row meal"><b>🍽️ 14:00 Lunch</b><br/>⭐ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Al+Wadi+Seville">Al Wadi</a> — halal, dekat Giralda/Cathedral.<br/>↔️ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=El+Rincon+de+Beirut+Seville">El Rincón de Beirut</a> — halal, Lebanese.<br/><span class="muted">🥗 Recommended: grilled meat/chicken + fattoush/hummus; air mineral.</span></div>
+<div class="row"><span class="time">15:15</span> <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Metropol+Parasol+Seville">Metropol Parasol</a></div><div class="row transport suggestion"><b>🚶 Metropol Parasol → café Centro / hotel</b><br/><span class="muted">Jalan kaki • area pusat compact; taxi hanya bila sudah lelah.</span></div>
+<div class="row meal"><b>☕ 16:30 Outdoor café</b><br/>⭐ Café terrace Centro. ↔️ Alternatif Santa Cruz.<br/><span class="muted">☕ Espresso/americano/decaf tanpa gula.</span></div>
+<div class="row"><span class="time">17:30</span> Rest</div>
+<div class="row meal"><b>🍽️ 19:30 Dinner</b><br/>⭐ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Tanto+Monta+Seville">Tanto Monta</a> — halal, kitchen sampai 00:00.<br/>↔️ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=El+Rincon+de+Beirut+Seville">El Rincón de Beirut</a>.<br/><span class="muted">🥗 Grilled chicken/skewer + salad; hindari minuman manis.</span></div>
+</div>
+<div class="card"><div class="day">17 Nov — Sevilla → Córdoba → Granada</div>
+<div class="row"><span class="time">07:00</span> 🌅 <b>Breakfast ringan</b><br/><span class="muted">Hotel. Telur/yogurt + coffee; jangan terlalu berat sebelum train.</span></div>
+<div class="row"><span class="time">08:11</span> 🚆 <b>iryo Sevilla → Córdoba</b></div>
+<div class="row"><span class="time">08:52</span> Tiba Córdoba</div>
+<div class="row transport"><span class="time">08:55–09:20</span> 🧳 <b>Titip koper di luggage storage</b><br/><span class="muted">⭐ Waktu khusus sudah dimasukkan. Idealnya storage sudah dipilih/dipesan sebelum hari H; jangan mengandalkan penitipan spontan.</span></div>
+<div class="row transport"><span class="time">09:20–09:30</span> 🚕 <b>Córdoba Station → Alcázar</b><br/><span class="muted">⭐ Taxi setelah koper aman; target tiba sekitar 09:30.</span><br/><a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Alcazar+de+los+Reyes+Cristianos+Cordoba">Alcázar de los Reyes Cristianos ↗</a></div>
+<div class="row"><span class="time">09:30–09:45</span> <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Alcazar+de+los+Reyes+Cristianos+Cordoba">Alcázar de los Reyes Cristianos</a><br/><span class="muted">⭐ Ultra-quick visit: courtyard/gardens &amp; fortress. Prioritas utama tetap Mezquita pukul 10:00.</span></div>
+<div class="row"><span class="time">09:45–10:00</span> 🚶 Alcázar → <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Mezquita+Cathedral+Cordoba">Mezquita-Catedral</a><br/><span class="muted">⭐ Jalan langsung; target tiba beberapa menit sebelum slot.</span></div><div class="row transport suggestion"><b>🚶 Mezquita-Catedral → Calleja de las Flores / Judería</b><br/><span class="muted">Jalan kaki ±5–10 menit • paling nyaman menikmati gang kota tua.</span></div>
+<div class="row"><span class="time">10:00–11:30</span> ⛪ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Mezquita+Cathedral+Cordoba">Mezquita-Catedral</a><br/><span class="muted">⭐ Slot utama Córdoba — target masuk pukul 10:00. Jadwal resmi November tetap dicek ulang mendekati tanggal.</span></div>
+<div class="row"><span class="time">12:00–12:30</span> <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Calleja+de+las+Flores+Cordoba">Calleja de las Flores</a> → <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Juder%C3%ADa+Cordoba">Judería</a></div><div class="row transport suggestion"><b>🚶 Judería → Roman Bridge</b><br/><span class="muted">Jalan kaki ±10–15 menit • rute santai melalui kawasan tua.</span></div>
+<div class="row meal"><b>🍽️ 12:30 Lunch — Judería</b><br/>⭐ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Taberna+La+Manuela+Cordoba">Taberna La Manuela</a>.<br/>↔️ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Restaurante+Umaueyon+Cordoba">Restaurante Umaueyon</a>.<br/><span class="muted">🥗 Gazpacho/salad + grilled fish/chicken; prioritaskan protein &amp; sayur.</span></div>
+<div class="row"><span class="time">13:45–14:30</span> <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Roman+Bridge+Cordoba">Roman Bridge</a> → <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Puerta+del+Puente+Cordoba">Puerta del Puente</a></div>
+<div class="row meal"><b>☕ 14:30 Outdoor café</b><br/>⭐ Café terrace area Judería/Mezquita.<br/>↔️ Café sekitar Plaza del Potro.<br/><span class="muted">☕ Espresso/americano/decaf tanpa gula.</span></div>
+<div class="row transport"><span class="time">15:15</span> <b>Menuju Córdoba Bus Station</b><br/><span class="muted">⭐ Taxi untuk menghemat tenaga; bus = VALUE.</span></div>
+<div class="row"><span class="time">16:15</span> Buffer di bus station</div>
+<div class="row"><span class="time">17:00</span> 🚌 <b>ALSA Córdoba → Granada</b></div>
+<div class="row"><span class="time">19:45</span> Granada → <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=4U+Suites+Granada">4U Suites</a><br/><span class="muted">⭐ Taxi dengan koper.</span></div>
+<div class="row meal"><b>🍽️ 20:30 Dinner</b><br/>⭐ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=El+Taj+Halal+Granada">El Taj Halal</a> — Centro.<br/>↔️ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Teteria+Alhambra+Granada">Tetería Alhambra</a>.<br/><span class="muted">🥗 Chicken/fish + salad/vegetables; porsi ringan setelah perjalanan.</span></div>
+</div>
+<div class="card"><div class="day">18 Nov — Granada / Alhambra</div>
+<div class="row"><span class="time">08:00</span> 🌅 <b>Breakfast</b><br/><span class="muted">Hotel/café dekat 4U Suites. Telur + plain yogurt + coffee.</span></div>
+<div class="row"><span class="time">09:00</span> <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Alhambra+Granada">Alhambra</a><br/><span class="muted">⭐ Taxi/bus. Jangan paksa jalan menanjak.</span></div>
+<div class="row"><span class="time">09:30–13:00</span> Nasrid Palaces / Generalife sesuai tiket</div><div class="row transport suggestion"><b>🚕 Alhambra → Granada Cathedral / Centro</b><br/><span class="muted">Taxi direkomendasikan ±15–20 menit; bus sebagai opsi VALUE. Dengan tenaga tersisa, jangan paksa jalan menurun jauh.</span></div>
+<div class="row meal"><b>🍽️ 13:30 Lunch</b><br/>⭐ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=El+Taj+Halal+Granada">El Taj Halal</a> — Reyes Católicos, Centro.<br/>↔️ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Vintage+Food+Granada">Vintage Food</a> — semua menu dinyatakan halal, cocok bila ingin makanan rumahan.<br/><span class="muted">🥗 Recommended: grilled fish/chicken + vegetables; El Taj juga punya falafel + hummus + sayuran.</span></div>
+<div class="row"><span class="time">15:00</span> <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Granada+Cathedral">Granada Cathedral</a> → <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Alcaiceria+Granada">Alcaicería</a></div><div class="row transport suggestion"><b>🚶 Granada Cathedral → Alcaicería</b><br/><span class="muted">Jalan kaki ±2–3 menit • satu area pusat.</span></div>
+<div class="row meal"><b>☕ 16:30 Outdoor café</b><br/>⭐ Café terrace Centro. ↔️ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Plaza+Nueva+Granada">Plaza Nueva</a>.<br/><span class="muted">☕ Espresso/americano/decaf tanpa gula.</span></div>
+<div class="row"><span class="time">17:30</span> <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Plaza+Nueva+Granada">Plaza Nueva</a> / rest</div><div class="row transport suggestion"><b>🚶 Alcaicería / Centro → Plaza Nueva</b><br/><span class="muted">Jalan kaki ±5–7 menit • atau taxi singkat bila ingin menghemat tenaga.</span></div>
+<div class="row meal"><b>🍽️ 19:30 Dinner</b><br/>⭐ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=El+Taj+Halal+Granada">El Taj Halal</a> — 100% halal, Centro.<br/>↔️ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Teteria+Alhambra+Granada">Tetería Alhambra</a> — 100% halal certified, buka sampai 01:00.<br/><span class="muted">🥗 Recommended: grilled fish/chicken + vegetables; dessert manis tidak perlu.</span></div>
+</div>
+<div class="card"><div class="day">19 Nov — Granada → Barcelona</div>
+<div class="row"><span class="time">08:00</span> 🌅 <b>Breakfast</b> — hotel</div>
+<div class="row"><span class="time">Pagi</span> Check-out → <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Granada+Airport">Granada Airport</a><br/><span class="muted">⭐ Taxi dengan koper.</span></div>
+<div class="row"><span class="time">10:50–12:15</span> ✈️ Flight Granada → Barcelona • Vueling VY1121</div>
+<div class="row">Barcelona Airport → <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Hostal+Poblenou+Barcelona">Hostal Poblenou</a><br/><span class="muted">Metro/bus = VALUE; taxi = COMFORT/LUGGAGE.</span></div><div class="row transport suggestion"><b>🚕 Barcelona Airport → Hostal Poblenou</b><br/><span class="muted">Taxi = COMFORT/LUGGAGE • paling masuk akal dengan 2 koper. Metro/bus = VALUE.</span></div>
+<div class="row meal"><b>🍽️ Lunch</b><br/>⭐ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=El+Pati+De+Poblenou+Barcelona">El Pati de Poblenou</a> — breakfast/lunch, Mediterranean, patio.<br/>↔️ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Kiena+Kiena+Poblenou+Barcelona">Kiena Kiena Poblenou</a> — outdoor seating, vegetarian/vegan options.<br/><span class="muted">🥗 Pilih grilled/vegetable-based dish; bila perlu halal, konfirmasi bahan/proses langsung.</span></div>
+<div class="row"><span class="time">Sore</span> <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Poblenou+Barcelona">Poblenou</a> walk ringan</div>
+<div class="row meal"><b>☕ Outdoor café</b><br/>⭐ Terrace Poblenou. ↔️ café dekat hotel.<br/><span class="muted">☕ Espresso/americano/decaf tanpa gula.</span></div>
+<div class="row meal"><b>🍽️ Dinner</b><br/>⭐ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=L%27Autentic+Poblenou+Barcelona">L'Autentic</a> — kandidat halal di Poblenou.<br/>↔️ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Sundown+Poblenou+Barcelona">Sundown</a> — Lebanese/halal option di Rambla del Poblenou.<br/><span class="muted">🥗 Recommended: grilled chicken/mezze + salad; konfirmasi halal saat datang.</span></div>
+</div>
+<div class="card"><div class="day">20 Nov — Barcelona • Slow Pace: Gaudí + Barcelona Kuno + Picasso</div>
+<div class="row meal"><span class="time">08:00</span> 🌅 <b>Breakfast santai</b><br/>⭐ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=El+Pati+De+Poblenou+Barcelona">El Pati de Poblenou</a> atau café dekat hotel.<br/><span class="muted">🥚 Eggs + plain yogurt/fruit bila tersedia + espresso/americano tanpa gula.</span></div>
+<div class="row"><span class="time">09:30–10:00</span> 📸 <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Sagrada+Familia+Barcelona">Sagrada Família</a> <b>— OPTIONAL / EKSTERIOR</b><br/><span class="muted">⭐ Jika tenaga dan mood memungkinkan, masuk ±1–1,5 jam. Kalau ingin tetap slow pace, cukup foto dari luar dan lanjut. Tidak wajib.</span></div><div class="row transport suggestion"><b>🚕 Hostal Poblenou → Sagrada Família</b><br/><span class="muted">Taxi direkomendasikan agar hemat tenaga; metro sebagai backup.</span></div>
+<div class="row"><span class="time">10:15–11:00</span> 🚕 <b>Menuju Ciutat Vella / Plaça del Rei</b><br/><span class="muted">Taxi/metro sesuai kondisi. Plaça Catalunya tidak menjadi agenda khusus; bila terlewati cukup lewat.</span></div>
+<div class="row"><span class="time">11:00–12:30</span> 🏺 <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=MUHBA+Casa+Padellas+Barcelona">MUHBA — Casa Padellàs / Plaça del Rei</a><br/><span class="muted">⭐ Barcelona Romawi (Barcino), lapisan medieval, dan arkeologi kota. Estimasi ±1–1,5 jam.</span></div>
+<div class="row"><span class="time">12:30–13:30</span> 🚶 <b>Plaça del Rei → El Born</b><br/><span class="muted">Jalan santai seperlunya; lihat suasana Gothic Quarter dan Santa Maria del Mar dari luar.</span></div>
+<div class="row meal"><b>🍽️ 13:30 Lunch</b><br/><span class="muted">⭐ Lunch santai di area El Born/Gothic Quarter; tidak perlu terburu-buru.</span></div>
+<div class="row"><span class="time">14:00–16:00</span> 🎨 <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Museu+Picasso+Barcelona">Museu Picasso</a><br/><span class="muted">⭐ Target tiket 14:00 untuk 2 pax. Tanggal 20 Nov 2026 menjadi awal pameran sementara “Picasso and Architecture” sesuai jadwal yang kita pantau.</span></div>
+<div class="row meal"><b>☕ 16:00–17:00 Outdoor café / nongkrong El Born</b><br/><span class="muted">⭐ Santai, people watching, tidak perlu mengejar objek lain.</span></div>
+<div class="row"><span class="time">17:00–18:00</span> 🚶 <b>Passeig del Born → Santa Maria del Mar / El Born</b><br/><span class="muted">⭐ Pilihan suasana sore yang hidup tetapi tetap santai. Jika sudah lelah, langsung kembali ke hotel.</span></div>
+<div class="row"><span class="time">18:00–19:00</span> 🚕 Kembali ke <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Hostal+Poblenou+Barcelona">Hostal Poblenou</a> / istirahat</div>
+<div class="row meal"><b>🍽️ 19:30 Dinner</b><br/>⭐ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Sundown+Poblenou+Barcelona">Sundown</a> — Lebanese/halal option di Poblenou.<br/>↔️ <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=L%27Autentic+Poblenou+Barcelona">L'Autentic</a>.<br/><span class="muted">🥗 Dinner santai; bila tenaga sudah habis, pilih yang paling dekat hotel.</span></div>
+</div>
+<div class="card"><div class="day">21 Nov — Barcelona → Jakarta</div>
+<div class="row meal"><span class="time">08:00</span> 🌅 <b>Breakfast</b> — <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=El+Pati+De+Poblenou+Barcelona">El Pati de Poblenou</a> atau <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Kaapeh+Poblenou+Barcelona">Kaapeh</a>.<br/><span class="muted">☕ Espresso/americano + telur/fruit/plain yogurt bila tersedia.</span></div>
+<div class="row"><span class="time">10:30</span> Check-out → <a class="place" href="https://www.google.com/maps/search/?api=1&amp;query=Barcelona+El+Prat+Airport">Barcelona Airport</a><br/><span class="muted">⭐ Taxi dengan koper.</span></div>
+<div class="row"><span class="time">15:35–23:05</span> ✈️ Barcelona → Jeddah • Saudia SV228<br/><span class="muted">Transfer Jeddah T1: 10 jam • baggage checked through.</span></div>
+<div class="row"><span class="time">09:05–22:45</span> ✈️ Jeddah → Jakarta • Saudia SV826 • 22 Nov</div>
+</div>
+</section>
+<section class="page" id="booking"><h2>🎟️ Booking &amp; Voucher</h2>
+<div class="note">Upload voucher tersimpan di browser perangkat ini. Slot khusus sudah disiapkan untuk voucher hotel Madinah &amp; Makkah. Setelah voucher diunggah, tekan Lihat untuk membukanya kembali.</div><div id="books"></div>
+</section>
+<section class="page" id="meal"><h2>🕋 Manasik / Tata Cara Umroh</h2>
+<div class="note">Panduan praktis lengkap: niat, talbiyah, doa Arab pada aktivitas terkait, syarat, rukun, kewajiban/praktik, larangan ihram, kesalahan umum, dan checklist. Beberapa rincian fiqih berbeda antarmazhab; untuk kasus khusus ikuti pembimbing/ustaz yang Viv pilih.</div>
+
+<div class="card"><h3>📌 Syarat & Struktur Umrah</h3>
+<p><b>Syarat umum:</b> Islam, berakal, dan mampu; termasuk kemampuan fisik/finansial serta keamanan perjalanan.</p>
+<p><b>Rangkaian pokok:</b> Ihram → Tawaf 7 putaran → Sa'i Safa–Marwah 7 perjalanan → Tahallul.</p>
+<p><b>Catatan:</b> istilah “rukun”, “wajib”, dan rincian sah dapat berbeda menurut mazhab. Panduan ini memakai alur yang umum.</p></div>
+
+<div class="card"><h3>🧭 1. Miqat & Ihram</h3>
+<p>Untuk rute Viv setelah Madinah menuju Makkah, miqat yang relevan adalah <b>Dzul Hulaifah (Bir Ali)</b>. Bila sudah berniat umrah, jangan melewati miqat tanpa ihram.</p>
+<ul><li>Mandi sunnah ihram.</li><li>Laki-laki memakai dua kain ihram; wanita memakai pakaian syar'i biasa yang menutup aurat.</li><li>Wewangian boleh sebelum ihram; setelah niat ihram jangan memakai parfum.</li><li>Tidak ada shalat khusus ihram yang wajib.</li></ul>
+<p><b>Niat umrah:</b></p>
+<div class="arabic" dir="rtl">لَبَّيْكَ اللَّهُمَّ بِعُمْرَةٍ</div>
+<p><i>Labbaika Allahumma bi 'umrah.</i></p>
+<p>“Aku memenuhi panggilan-Mu, ya Allah, untuk menunaikan umrah.”</p></div>
+
+<div class="card"><h3>📿 2. Talbiyah</h3>
+<div class="arabic" dir="rtl">لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيكَ لَكَ</div>
+<p>Perbanyak talbiyah selama perjalanan menuju Makkah. Talbiyah dihentikan ketika mulai tawaf.</p></div>
+
+<div class="card"><h3>🚪 3. Masuk Masjidil Haram</h3>
+<div class="arabic" dir="rtl">بِسْمِ اللَّهِ، وَالصَّلَاةُ وَالسَّلَامُ عَلَى رَسُولِ اللَّهِ، اللَّهُمَّ اغْفِرْ لِي ذُنُوبِي، وَافْتَحْ لِي أَبْوَابَ رَحْمَتِكَ</div>
+<p>Masuk dengan kaki kanan dan berdoa. Setelah itu menuju area tawaf.</p></div>
+
+<div class="card"><h3>🕋 4. Tawaf — 7 Putaran</h3>
+<ul><li>Mulai dari Hajar Aswad, Ka'bah di sebelah kiri.</li><li>Setiap melewati Hajar Aswad, bila tidak memungkinkan mencium/menyentuhnya, cukup memberi isyarat dan bertakbir.</li><li>Tawaf 7 putaran dan berakhir di Hajar Aswad.</li><li>Antara Rukun Yamani dan Hajar Aswad:</li></ul>
+<div class="arabic" dir="rtl">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</div>
+<p><b>Penting:</b> tidak ada doa khusus yang sahih untuk setiap putaran. Bebas berzikir, membaca Al-Qur'an, dan berdoa.</p>
+<p>Laki-laki: idhtiba selama tawaf dan raml pada 3 putaran pertama menurut tuntunan yang umum.</p></div>
+
+<div class="card"><h3>🙏 5. Setelah Tawaf</h3>
+<ul><li>Shalat 2 rakaat di tempat yang memungkinkan.</li><li>Berdoa sesuai kebutuhan.</li><li>Minum Zamzam dan berdoa.</li></ul></div>
+
+<div class="card"><h3>🏃 6. Sa'i — Safa ke Marwah</h3>
+<p>Mulai di Safa dan berakhir di Marwah. Total 7 perjalanan: Safa→Marwah = 1; perjalanan ke-7 berakhir di Marwah.</p>
+<div class="arabic" dir="rtl">إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ</div>
+<p>Di Safa menghadap kiblat, bertakbir/bertahlil dan berdoa. Tidak harus memakai satu teks doa tertentu. Laki-laki berjalan lebih cepat di antara dua tanda hijau; wanita berjalan biasa.</p></div>
+
+<div class="card"><h3>✂️ 7. Tahallul</h3>
+<ul><li>Laki-laki mencukur habis atau memendekkan rambut.</li><li>Wanita memotong ujung rambut secukupnya.</li><li>Setelah tahallul, umrah selesai dan larangan ihram berakhir.</li></ul></div>
+
+<div class="card"><h3>🚫 8. Larangan Saat Ihram</h3>
+<ul><li>Hubungan seksual dan tindakan seksual.</li><li>Akad nikah/menikahkan dan rincian meminang menurut ketentuan fiqih.</li><li>Memotong atau mencabut rambut dengan sengaja.</li><li>Memotong kuku.</li><li>Menggunakan parfum/wewangian setelah ihram.</li><li>Berburu atau membantu perburuan hewan darat liar dalam ketentuan Tanah Haram.</li><li><b>Khusus laki-laki:</b> memakai pakaian yang mengikuti bentuk tubuh seperti pakaian biasa dan menutup kepala dengan penutup yang melekat.</li><li><b>Khusus wanita:</b> tidak memakai niqab dan sarung tangan khusus ihram menurut tuntunan yang umum.</li></ul>
+<p class="muted">Fidyah/dam bergantung pada jenis pelanggaran dan keadaan. Untuk pelanggaran serius, tanyakan pembimbing/ulama.</p></div>
+
+<div class="card"><h3>⚠️ 9. Yang Sering Keliru</h3>
+<ul><li>❌ Menganggap ada doa wajib berbeda untuk setiap putaran tawaf.</li><li>❌ Berebut Hajar Aswad sampai menyakiti orang lain.</li><li>❌ Menganggap harus mengikuti buku doa putaran 1–7.</li><li>❌ Memakai parfum setelah ihram.</li><li>❌ Mengira shalat harus tepat di belakang Maqam Ibrahim.</li><li>❌ Salah menghitung sa'i; perjalanan pertama adalah Safa→Marwah.</li></ul></div>
+
+<div class="card"><h3>👫 10. Checklist Umrah</h3>
+<div class="checklist">☐ Mandi ihram<br/>☐ Pakaian ihram<br/>☐ Miqat<br/>☐ Niat umrah<br/>☐ Talbiyah<br/>☐ Masuk Masjidil Haram<br/>☐ Tawaf 7 putaran<br/>☐ Shalat 2 rakaat<br/>☐ Zamzam<br/>☐ Sa'i 7 perjalanan<br/>☐ Tahallul<br/>☐ Umrah selesai</div></div>
+
+<div class="card"><h3>📚 Catatan Fiqih</h3>
+<p>Panduan ini dibuat untuk menjadi “cheat sheet” saat perjalanan, bukan pengganti bimbingan fiqih. Bila muncul kondisi khusus—misalnya sakit, haid/nifas, lupa miqat, pelanggaran ihram, atau keraguan jumlah putaran—sebaiknya langsung tanyakan pembimbing.</p></div>
+</section>
+<section class="page" id="history">
+<h2>📚 History — Al-Andalus & Destinasi</h2>
+<div class="note">Cheat sheet perjalanan: tekan tujuan pada Index untuk langsung menuju bagian yang diinginkan. Setelah selesai membaca, tekan <b>⬆️ Kembali ke Index</b>.</div>
+
+<div class="history-index" id="history-index">
+<h3>🧭 Index History</h3>
+<a href="#timeline">🕰️ Al-Andalus Timeline</a>
+<a href="#catedral">⛪ Catedral + Giralda — Sevilla</a>
+<a href="#alcazar">🏰 Real Alcázar — Sevilla</a>
+<a href="#mezquita">🕌 Mezquita-Catedral — Córdoba</a>
+<a href="#alhambra">🏯 Alhambra — Granada</a>
+<a href="#picasso">🎨 Museu Picasso — Barcelona</a>
+<a href="#sagrada">✝️ Sagrada Família — Barcelona</a>
+<a href="#muhba">🏛️ MUHBA Casa Padellàs — Barcelona</a>
+</div>
+
+<div class="card history-card" id="timeline">
+<h3>🕰️ Al-Andalus Timeline</h3>
+<div class="timeline">
+<p class="t"><b>711 — Awal periode Al-Andalus</b><br><span class="muted">Pasukan Muslim memasuki Semenanjung Iberia. Dalam beberapa dekade, sebagian besar wilayah berada di bawah pemerintahan Muslim.</span></p>
+<p class="t"><b>756 — Emirat Umayyah Córdoba</b><br><span class="muted">Abd al-Rahman I mendirikan pemerintahan Umayyah di Córdoba yang kemudian berkembang menjadi pusat politik dan budaya penting.</span></p>
+<p class="t"><b>929 — Kekhalifahan Córdoba</b><br><span class="muted">Abd al-Rahman III memproklamasikan kekhalifahan. Córdoba menjadi salah satu pusat kota besar dunia Mediterania pada masanya.</span></p>
+<p class="t"><b>1031 — Taifa</b><br><span class="muted">Kekhalifahan Córdoba berakhir dan wilayah terpecah menjadi banyak kerajaan kecil (taifa), termasuk Sevilla dan Granada pada periode-periode berikutnya.</span></p>
+<p class="t"><b>1086 — Almoravid</b><br><span class="muted">Dinasti Almoravid dari Afrika Utara masuk ke Iberia dan kemudian menguasai banyak wilayah taifa.</span></p>
+<p class="t"><b>1147 — Almohad</b><br><span class="muted">Almohad menggantikan Almoravid dan menjadikan Sevilla salah satu pusat kekuasaan mereka. Giralda dan bagian awal kompleks Alcázar terkait erat dengan periode ini.</span></p>
+<p class="t"><b>1236 — Córdoba jatuh ke Kerajaan Kastilia</b><br><span class="muted">Kota Córdoba ditaklukkan Ferdinand III. Masjid Agung kemudian diubah menjadi katedral, membentuk Mezquita-Catedral yang kita lihat sekarang.</span></p>
+<p class="t"><b>1248 — Sevilla jatuh</b><br><span class="muted">Ferdinand III menaklukkan Sevilla. Masjid Agung diubah menjadi katedral dan kompleks kekuasaan lama terus berkembang menjadi bentuk yang sekarang kita kenal sebagai Real Alcázar.</span></p>
+<p class="t"><b>1230-an–1492 — Granada Nasrid</b><br><span class="muted">Kerajaan Granada menjadi kerajaan Muslim terakhir di Iberia. Kompleks Alhambra berkembang sebagai pusat istana dan pemerintahan Dinasti Nasrid.</span></p>
+<p class="t"><b>1492 — Granada jatuh</b><br><span class="muted">Granada menyerah kepada Ferdinand II dan Isabella I. Peristiwa ini menandai berakhirnya pemerintahan Muslim di Iberia.</span></p>
+</div>
+<div class="history-tip"><b>Kunci membaca Andalusia:</b> Córdoba memperlihatkan warisan Umayyah, Sevilla memperlihatkan kuatnya jejak Almohad dan periode sesudah Reconquista, sedangkan Granada memperlihatkan fase terakhir Dinasti Nasrid.</div>
+<a class="back-index" href="#history-index">⬆️ Kembali ke Index</a>
+</div>
+
+<div class="card history-card" id="catedral">
+<h3>⛪ Catedral + Giralda — Sevilla</h3>
+<h4>📜 Cerita singkat</h4>
+<p>Bangunan yang sekarang menjadi Catedral de Santa María de la Sede berdiri di atas kawasan bekas Masjid Agung Sevilla. Masjid tersebut berkembang pada masa pemerintahan Almohad pada abad ke-12. Menara masjidnya kemudian dipertahankan dan diubah menjadi <b>Giralda</b>, sehingga bentuk bangunan sekarang memperlihatkan pertemuan antara warisan Islam dan arsitektur Kristen.</p>
+<p>Setelah Sevilla ditaklukkan pada 1248, masjid digunakan sebagai gereja. Pada abad-abad berikutnya kompleks tersebut berkembang menjadi katedral besar. Karena itu, saat masuk, Bapak tidak sedang melihat satu bangunan dari satu zaman saja, tetapi lapisan sejarah yang berlangsung berabad-abad.</p>
+<h4>👀 Wajib lihat</h4>
+<ul><li><b>Giralda:</b> bagian bawah menunjukkan karakter Almohad, sedangkan bagian atas berubah menjadi menara lonceng Kristen.</li><li><b>Interior katedral:</b> perhatikan skala ruang yang sangat besar.</li><li><b>Patio de los Naranjos:</b> halaman yang mempertahankan karakter halaman masjid dengan pohon jeruk dan elemen air.</li><li><b>Makam Christopher Columbus:</b> salah satu objek terkenal di dalam katedral.</li><li><b>Jalur naik Giralda:</b> ramp landai merupakan ciri penting menara lama.</li></ul>
+<h4>🔎 Perhatikan saat berkunjung</h4>
+<p>Lihat bangunan ini sebagai <b>dokumen sejarah tiga lapis</b>: masjid Almohad → gereja setelah penaklukan → katedral monumental. Cari jejak struktur lama terutama di halaman dan menara.</p>
+<div class="history-tip"><b>Kalimat pengingat:</b> “Giralda adalah bekas minaret Almohad yang kemudian menjadi bell tower katedral Sevilla.”</div>
+<a class="back-index" href="#history-index">⬆️ Kembali ke Index</a>
+</div>
+
+<div class="card history-card" id="alcazar">
+<h3>🏰 Real Alcázar — Sevilla</h3>
+<h4>📜 Cerita singkat</h4>
+<p>Real Alcázar adalah kompleks istana yang mengalami banyak pembangunan dan perubahan sepanjang sejarah Sevilla. Jejak pentingnya berasal dari periode Islam, terutama ketika Sevilla menjadi pusat kekuasaan Almohad. Setelah penaklukan Kristen, kompleks tersebut tidak dihancurkan seluruhnya; terus digunakan, diperluas, dan dibentuk ulang oleh para penguasa berikutnya.</p>
+<p>Salah satu bagian paling penting adalah <b>Palacio de Pedro I</b>. Dibangun pada abad ke-14 pada masa Pedro I, istana ini terkenal karena gaya <b>Mudéjar</b>—arsitektur kerajaan Kristen yang menggunakan bahasa visual, teknik, dan pengrajin yang sangat dipengaruhi tradisi Islam Andalusia.</p>
+<h4>👀 Wajib lihat</h4>
+<ul><li><b>Patio de las Doncellas:</b> simetri halaman, kolom, lengkung, plesteran, ubin, dan hubungan ruang terbuka dengan istana.</li><li><b>Salón de Embajadores:</b> ruang representasi utama; lihat kubah dan dekorasinya.</li><li><b>Palacio de Pedro I:</b> contoh utama gaya Mudéjar dalam kompleks.</li><li><b>Jardines:</b> sistem air, kolam, tanaman, dan hubungan taman dengan istana.</li><li><b>Jejak Islam:</b> pola geometris, kaligrafi, ubin, lengkung, dan penggunaan air.</li></ul>
+<h4>🔎 Perhatikan saat berkunjung</h4>
+<p>Jangan menganggap Alcázar sebagai “istana Muslim” atau “istana Kristen” secara sederhana. Ia adalah <b>kompleks yang terus hidup dan berubah</b>, dengan periode Almohad sebagai salah satu lapisan awal dan pembangunan Kristen sebagai lapisan berikutnya.</p>
+<div class="history-tip"><b>Kalimat pengingat:</b> “Alcázar adalah istana berlapis sejarah; Palacio de Pedro I adalah contoh paling jelas gaya Mudéjar dalam kompleksnya.”</div>
+<a class="back-index" href="#history-index">⬆️ Kembali ke Index</a>
+</div>
+
+<div class="card history-card" id="mezquita">
+<h3>🕌 Mezquita-Catedral — Córdoba</h3>
+<h4>📜 Cerita singkat</h4>
+<p>Masjid Agung Córdoba merupakan salah satu peninggalan terpenting masa Umayyah di Al-Andalus. Abd al-Rahman I memulai pembangunan masjid pada abad ke-8, kemudian kompleks diperluas oleh penguasa Umayyah berikutnya, termasuk Abd al-Rahman II, Abd al-Rahman III, dan al-Hakam II. Perluasan tersebut menghasilkan ruang salat yang sangat luas dan terkenal dengan deretan kolom serta lengkung merah-putih.</p>
+<p>Bagian <b>mihrab</b> dan <b>maqsurah</b> dari perluasan al-Hakam II menjadi salah satu bagian paling kaya dekorasi. Setelah Córdoba ditaklukkan pada 1236, bangunan ini menjadi gereja. Pada abad-abad berikutnya, kapel dan kemudian katedral dibangun di dalam kompleks lama.</p>
+<h4>👀 Wajib lihat</h4>
+<ul><li><b>Hutan kolom:</b> repetisi lengkung bertingkat dan efek perspektifnya.</li><li><b>Mihrab:</b> mosaik, bentuk lengkung, dan dekorasi.</li><li><b>Maqsurah:</b> lengkung silang yang lebih kompleks di depan mihrab.</li><li><b>Katedral di tengah masjid:</b> struktur Kristen yang berdiri di dalam ruang bekas masjid.</li><li><b>Pintu dan fasad lama:</b> perbedaan struktur dari berbagai periode.</li></ul>
+<h4>🔎 Perhatikan saat berkunjung</h4>
+<p>Jangan hanya menghitung jumlah kolom. Perhatikan perubahan suasana dari ruang masjid yang rendah dan repetitif menuju ruang katedral yang lebih vertikal. Kontras itu membantu membaca sejarah bangunan.</p>
+<div class="history-tip"><b>Kalimat pengingat:</b> “Mezquita-Catedral memperlihatkan secara langsung pergantian dan penumpukan fungsi keagamaan selama berabad-abad.”</div>
+<a class="back-index" href="#history-index">⬆️ Kembali ke Index</a>
+</div>
+
+<div class="card history-card" id="alhambra">
+<h3>🏯 Alhambra — Granada</h3>
+<h4>📜 Cerita singkat</h4>
+<p>Alhambra berkembang sebagai pusat pemerintahan dan kediaman para penguasa <b>Dinasti Nasrid</b>, dinasti Muslim terakhir yang memerintah Granada. Pembangunan besar dimulai pada masa Muhammad I pada abad ke-13 dan kompleks terus dikembangkan oleh para sultan berikutnya.</p>
+<p>Alhambra bukan sekadar satu istana. Kompleksnya mencakup benteng <b>Alcazaba</b>, <b>Nasrid Palaces</b>, taman dan kediaman <b>Generalife</b>, serta berbagai ruang administratif dan pelayanan. Setelah Granada jatuh pada 1492, kompleks tersebut digunakan oleh penguasa Kristen dan mengalami perubahan tambahan.</p>
+<h4>👀 Wajib lihat</h4>
+<ul><li><b>Mexuar:</b> salah satu ruang awal dalam rangkaian Nasrid Palaces.</li><li><b>Palace of Comares:</b> pusat representasi kerajaan dengan Court of the Myrtles.</li><li><b>Salón de Embajadores:</b> ruang penting dengan dekorasi dan kubah kaya.</li><li><b>Court of the Lions:</b> perhatikan proporsi, kolom, air, dan dekorasi.</li><li><b>Generalife:</b> hubungan taman, air, cahaya, dan pemandangan.</li><li><b>Alcazaba:</b> bagian benteng dan sudut pandang strategis terhadap Granada.</li></ul>
+<h4>🔎 Perhatikan saat berkunjung</h4>
+<p>Dalam arsitektur Nasrid, <b>dekorasi bukan sekadar hiasan</b>. Perhatikan kaligrafi, pola geometris, arabesque, muqarnas, permainan cahaya, dan air. Banyak permukaan dibuat agar ruang terasa lebih kaya daripada ukuran fisiknya.</p>
+<div class="history-tip"><b>Kalimat pengingat:</b> “Alhambra adalah puncak warisan istana Nasrid—ruang, cahaya, air, taman, dan dekorasi bekerja sebagai satu kesatuan.”</div>
+<a class="back-index" href="#history-index">⬆️ Kembali ke Index</a>
+</div>
+
+<div class="card history-card" id="sagrada">
+<h3>✝️ Sagrada Família — Barcelona</h3>
+<h4>📜 Cerita singkat</h4>
+<p>Sagrada Família adalah basilika karya Antoni Gaudí yang pembangunannya dimulai pada akhir abad ke-19 dan terus berkembang hingga sekarang. Bangunan ini memperlihatkan pendekatan Gaudí terhadap struktur, bentuk alam, cahaya, dan simbolisme Kristen.</p>
+<h4>👀 Wajib lihat</h4>
+<ul><li><b>Fasad:</b> perhatikan perbedaan karakter fasad Nativity dan Passion.</li><li><b>Interior:</b> lihat bagaimana kolom bercabang seperti pohon dan membawa beban struktur.</li><li><b>Cahaya:</b> perhatikan efek kaca patri terhadap suasana ruang.</li><li><b>Geometri:</b> amati bentuk-bentuk geometris dan inspirasi dari alam.</li></ul>
+<h4>🔎 Cara membaca saat kunjungan</h4>
+<p>Untuk itinerary Bapak, Sagrada Família bersifat <b>opsional</b>. Bila hanya melihat dari luar, fokus pada fasad dan bentuk menaranya. Bila masuk, cukup sekitar 1–1,5 jam untuk memahami hubungan struktur, cahaya, alam, dan simbolisme tanpa mengubah ritme perjalanan santai.</p>
+<div class="history-tip"><b>Kalimat pengingat:</b> “Sagrada Família adalah contoh bagaimana Gaudí menggabungkan struktur, geometri, alam, cahaya, dan simbolisme Kristen dalam satu ruang.”</div>
+<a class="back-index" href="#history-index">⬆️ Kembali ke Index</a>
+</div>
+
+<div class="card history-card" id="muhba">
+<h3>🏛️ MUHBA Casa Padellàs — Barcelona</h3>
+<h4>📜 Cerita singkat</h4>
+<p>Casa Padellàs adalah salah satu lokasi MUHBA (Museu d'Història de Barcelona) di kawasan Plaça del Rei. Tempat ini membantu membaca sejarah Barcelona melalui lapisan kota dan peninggalan arkeologi, termasuk jejak Barcino pada masa Romawi.</p>
+<h4>👀 Wajib lihat</h4>
+<ul><li><b>Lapisan arkeologi:</b> perhatikan bagaimana peninggalan kota lama berada di bawah dan di sekitar bangunan sekarang.</li><li><b>Barcino:</b> lihat jejak kehidupan kota Romawi dan struktur perkotaannya.</li><li><b>Plaça del Rei:</b> perhatikan hubungan museum dengan kawasan bersejarah di sekitarnya.</li><li><b>Bangunan Casa Padellàs:</b> amati pertemuan antara bangunan bersejarah dan situs arkeologi kota.</li></ul>
+<h4>🔎 Cara membaca saat kunjungan</h4>
+<p>Casa Padellàs cocok sebagai pengantar sejarah Barcelona sebelum Museu Picasso. Fokus pada gagasan bahwa Barcelona yang terlihat sekarang berdiri di atas <b>lapisan kota dari berbagai zaman</b>.</p>
+<div class="history-tip"><b>Kalimat pengingat:</b> “MUHBA Casa Padellàs membantu melihat Barcelona sebagai kota berlapis—dari Barcino Romawi hingga kota Barcelona sekarang.”</div>
+<a class="back-index" href="#history-index">⬆️ Kembali ke Index</a>
+</div>
+
+<div class="card history-card" id="picasso">
+<h3>🎨 Museu Picasso — Barcelona</h3>
+<h4>📜 Cerita singkat</h4>
+<p>Museu Picasso Barcelona menekankan hubungan Picasso dengan masa muda dan Barcelona. Picasso datang ke Barcelona pada usia muda dan kota ini berperan penting dalam pembentukan perkembangan artistiknya.</p>
+<p>Museum membantu melihat <b>evolusi</b> Picasso dari karya awal, latihan akademis dan potret, hingga perubahan bahasa visualnya. Karena itu, kunjungan sebaiknya tidak hanya mencari satu lukisan terkenal, tetapi mengikuti bagaimana teknik, bentuk, dan cara Picasso melihat subjek berubah.</p>
+<h4>👀 Wajib lihat</h4>
+<ul><li><b>Karya masa awal:</b> perhatikan kemampuan menggambar dan teknik akademisnya.</li><li><b>Perkembangan gaya:</b> bandingkan karya dari periode berbeda.</li><li><b>Barcelona connection:</b> ingat hubungan museum dengan fase pembentukan Picasso di kota tersebut.</li><li><b>Las Meninas series:</b> bila tersedia dalam rute kunjungan, perhatikan bagaimana Picasso menafsirkan ulang karya Velázquez.</li></ul>
+<h4>🔎 Cara membaca museum</h4>
+<p>Gunakan pertanyaan sederhana: <b>“Apa yang berubah dari karya sebelumnya?”</b> Lihat bentuk wajah, perspektif, warna, garis, dan cara ruang digambarkan. Dengan cara ini museum menjadi perjalanan perkembangan seniman.</p>
+<div class="history-tip"><b>Kalimat pengingat:</b> “Picasso Museum Barcelona paling menarik bila dibaca sebagai perjalanan perkembangan Picasso, terutama hubungan karya-karyanya dengan masa muda dan Barcelona.”</div>
+<a class="back-index" href="#history-index">⬆️ Kembali ke Index</a>
+</div>
+</section>
+<section class="page" id="todo"><h2>☑️ To Do</h2><div class="card">
+<div class="row">☐ Final cek Madrid → Sevilla</div><div class="row">☐ Simpan voucher offline</div><div class="row">☐ Upload voucher Deyar El Eiman</div><div class="row">☐ Upload voucher Worth Elite Makkah</div><div class="row">☐ Finalisasi jam buka &amp; pilihan Meal</div><div class="row">☐ Finalisasi local transport</div><div class="row">☐ eSIM / roaming</div><div class="row">☐ Packing 20" + backpack</div></div></section>
+</main>
+<nav class="tabs">
+<button class="on" onclick="go('home',this)"><b>⌂</b>Home</button>
+<button onclick="go('itinerary',this)"><b>▤</b>Itinerary</button>
+<button onclick="go('booking',this)"><b>🎟</b>Booking</button>
+<button onclick="go('meal',this)"><b>🕋</b>Manasik</button>
+<button onclick="go('history',this)"><b>📚</b>History</button>
+<button onclick="go('todo',this)"><b>☑</b>To Do</button>
+</nav>
+<script>
+const books=["✈️ CGK → Jeddah • 6 Nov • 17:30–23:25 • Saudia SV819","🏨 Voucher Hotel Madinah — Deyar El Eiman • 7–10 Nov","🏨 Voucher Hotel Makkah — Worth Elite • 11–14 Nov","✈️ Jeddah → Madrid • 14 Nov • 08:25–13:25 • Saudia SV227","🚆 Madrid → Sevilla • 14 Nov • 19:05–21:44","🏨 The Zentral Sevilla","🏰 Real Alcázar Sevilla • 16 Nov • 09:15","⛪ Seville Cathedral + Giralda • 16 Nov • 11:30","🚆 iryo Sevilla → Córdoba • 17 Nov • 08:11–08:52","🕌 Mezquita-Catedral Córdoba • 17 Nov • 10:00","🚌 ALSA Córdoba → Granada • 17 Nov • 17:00–19:45","🏨 4U Suites Granada • 17–19 Nov","🏛️ Alhambra • 18 Nov • 09:30–13:00","✈️ Granada → Barcelona • 19 Nov • 10:50–12:15 • Vueling VY1121","🏨 Hostal Poblenou • 19–21 Nov","🏺 MUHBA — Casa Padellàs / Plaça del Rei • 20 Nov • 11:00","🎨 Museu Picasso Barcelona • 20 Nov • 14:00","✈️ Barcelona → Jeddah • 21 Nov • 15:35–23:05 • Saudia SV228","✈️ Jeddah → Jakarta • 22 Nov • 09:05–22:45 • Saudia SV826","🛡️ Travel Insurance — Umroh + Andalusia 2026"];
+const dbName="andalusia-v25";
+function odb(){return new Promise((a,b)=>{let r=indexedDB.open(dbName,1);r.onupgradeneeded=()=>r.result.createObjectStore("v");r.onsuccess=()=>a(r.result);r.onerror=()=>b(r.error)})}
+async function migrateBookingOrder(){let d=await odb();return new Promise((a,b)=>{let t=d.transaction("v","readwrite"),s=t.objectStore("v");Promise.all([15,16,17,18].map(i=>new Promise((res,rej)=>{let r=s.get(String(i));r.onsuccess=()=>res([i,r.result]);r.onerror=()=>rej(r.error)}))).then(rows=>{let m=new Map(rows);s.put(m.get(18),String(15));s.put(m.get(15),String(16));s.put(m.get(16),String(17));s.put(m.get(17),String(18));t.oncomplete=a;t.onerror=()=>b(t.error)}).catch(b)})}
+async function put(i,f){let d=await odb();return new Promise((a,b)=>{let t=d.transaction("v","readwrite");t.objectStore("v").put(f,String(i));t.oncomplete=a;t.onerror=()=>b(t.error)})}
+async function get(i){let d=await odb();return new Promise((a,b)=>{let r=d.transaction("v").objectStore("v").get(String(i));r.onsuccess=()=>a(r.result);r.onerror=()=>b(r.error)})}
+function render(){document.getElementById("books").innerHTML=books.map((x,i)=>`<div class="card"><b>${x}</b><div class="actions"><label class="btn">📎 Upload<input type="file" accept=".pdf,image/*" onchange="up(${i},this.files[0])"></label><button class="btn secondary" onclick="view(${i})">👁 Lihat</button><button class="btn danger" onclick="del(${i})">Hapus</button></div><div id="s${i}" class="muted"></div></div>`).join("");books.forEach(async(_,i)=>{let f=await get(i);if(f)document.getElementById("s"+i).textContent="📎 "+f.name})}
+async function up(i,f){if(!f)return;await put(i,f);render();alert("Voucher tersimpan 👍")}
+async function view(i){let w=window.open("about:blank","_blank");let f=await get(i);if(!f){if(w)w.close();alert("Belum ada voucher.");return}let u=URL.createObjectURL(f);if(w){w.location.href=u}else{let a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener";document.body.appendChild(a);a.click();a.remove()}}
+async function del(i){let d=await odb();d.transaction("v","readwrite").objectStore("v").delete(String(i));setTimeout(render,100)}
+function go(id,b){document.querySelectorAll(".page").forEach(x=>x.classList.remove("on"));document.getElementById(id).classList.add("on");document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("on"));b.classList.add("on");scrollTo(0,0)}
+migrateBookingOrder().then(()=>render()).catch(()=>render());
+if ('serviceWorker' in navigator) { window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(()=>{})); }
+</script>
+</body></html>
