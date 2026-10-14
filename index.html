@@ -391,7 +391,7 @@ async function up(i,f){if(!f)return;await put(i,f);render();alert("Voucher tersi
 async function view(i){let w=window.open("about:blank","_blank");let f=await get(i);if(!f){if(w)w.close();alert("Belum ada voucher.");return}let u=URL.createObjectURL(f);if(w){w.location.href=u}else{let a=document.createElement("a");a.href=u;a.target="_blank";a.rel="noopener";document.body.appendChild(a);a.click();a.remove()}}
 async function del(i){let d=await odb();d.transaction("v","readwrite").objectStore("v").delete(String(i));setTimeout(render,100)}
 function go(id,b){document.querySelectorAll(".page").forEach(x=>x.classList.remove("on"));document.getElementById(id).classList.add("on");document.querySelectorAll(".tabs button").forEach(x=>x.classList.remove("on"));b.classList.add("on");scrollTo(0,0)}
-migrateBookingOrder().then(()=>render()).catch(()=>render());
+render();
 if ('serviceWorker' in navigator) { window.addEventListener('load', () => navigator.serviceWorker.register('./sw.js').catch(()=>{})); }
 </script>
 </body></html>
